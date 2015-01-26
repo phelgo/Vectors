@@ -1,4 +1,6 @@
 
+import Darwin
+
 struct Vector3D {
     let x: Double
     let y: Double
@@ -9,4 +11,9 @@ struct Vector3D {
         self.y = y
         self.z = z
     }
+    
+    var magnitude: Double {
+        return sqrt(x * x + y * y + z * z)
+    }
 }
+
