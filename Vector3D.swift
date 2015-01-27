@@ -16,6 +16,8 @@ struct Vector3D {
         return sqrt(x * x + y * y + z * z)
     }
     
+    static let zero = Vector3D(0, 0, 0)
+    static let one = Vector3D(1, 1, 1)
     static let left = Vector3D(-1, 0, 0)
     static let right = Vector3D(1, 0, 0)
     static let up = Vector3D(0, 1, 0)
