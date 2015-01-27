@@ -14,6 +14,8 @@ struct Vector2D {
         return sqrt(x * x + y * y)
     }
     
+    static let zero = Vector2D(0, 0)
+    static let one = Vector2D(1, 1)
     static let left = Vector2D(-1, 0)
     static let right = Vector2D(1, 0)
     static let up = Vector2D(0, 1)
