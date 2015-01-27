@@ -15,5 +15,12 @@ struct Vector3D {
     var magnitude: Double {
         return sqrt(x * x + y * y + z * z)
     }
+    
+    static let left = Vector3D(-1, 0, 0)
+    static let right = Vector3D(1, 0, 0)
+    static let up = Vector3D(0, 1, 0)
+    static let down = Vector3D(0, -1, 0)
+    static let forward = Vector3D(0, 0, 1)
+    static let back = Vector3D(0, 0, -1)
 }
 
