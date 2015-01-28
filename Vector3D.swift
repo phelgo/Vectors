@@ -16,6 +16,10 @@ struct Vector3D {
         return sqrt(x * x + y * y + z * z)
     }
     
+    var normalized: Vector3D {
+        return Vector3D(x / magnitude, y / magnitude, z / magnitude)
+    }
+    
     static let zero = Vector3D(0, 0, 0)
     static let one = Vector3D(1, 1, 1)
     static let left = Vector3D(-1, 0, 0)
