@@ -14,6 +14,10 @@ struct Vector2D {
         return sqrt(x * x + y * y)
     }
     
+    var normalized: Vector2D {
+        return Vector2D(x / magnitude, y / magnitude)
+    }
+    
     static let zero = Vector2D(0, 0)
     static let one = Vector2D(1, 1)
     static let left = Vector2D(-1, 0)
