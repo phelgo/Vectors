@@ -30,3 +30,6 @@ struct Vector3D {
     static let back = Vector3D(0, 0, -1)
 }
 
+func + (lhs: Vector3D, rhs: Vector3D) -> Vector3D {
+    return Vector3D(lhs.x + rhs.x, lhs.y + rhs.y, lhs.z + rhs.z)
+}
