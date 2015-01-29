@@ -33,3 +33,7 @@ struct Vector3D {
 func + (lhs: Vector3D, rhs: Vector3D) -> Vector3D {
     return Vector3D(lhs.x + rhs.x, lhs.y + rhs.y, lhs.z + rhs.z)
 }
+
+func - (lhs: Vector3D, rhs: Vector3D) -> Vector3D {
+    return Vector3D(lhs.x - rhs.x, lhs.y - rhs.y, lhs.z - rhs.z)
+}
