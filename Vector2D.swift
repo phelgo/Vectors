@@ -29,3 +29,7 @@ struct Vector2D {
 func + (lhs: Vector2D, rhs: Vector2D) -> Vector2D {
     return Vector2D(lhs.x + rhs.x, lhs.y + rhs.y)
 }
+
+func - (lhs: Vector2D, rhs: Vector2D) -> Vector2D {
+    return Vector2D(lhs.x - rhs.x, lhs.y - rhs.y)
+}
