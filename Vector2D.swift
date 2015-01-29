@@ -25,3 +25,7 @@ struct Vector2D {
     static let up = Vector2D(0, 1)
     static let down = Vector2D(0, -1)
 }
+
+func + (lhs: Vector2D, rhs: Vector2D) -> Vector2D {
+    return Vector2D(lhs.x + rhs.x, lhs.y + rhs.y)
+}
