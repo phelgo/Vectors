@@ -1,4 +1,7 @@
 
+// Vector structs for Swift
+// Copyright (c) 2015 phelgo. MIT licensed.
+
 import Darwin
 
 struct Vector4D {
