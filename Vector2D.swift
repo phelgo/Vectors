@@ -40,3 +40,7 @@ func - (left: Vector2D, right: Vector2D) -> Vector2D {
 func += (inout left: Vector2D, right: Vector2D) {
     left = left + right
 }
+
+func -= (inout left: Vector2D, right: Vector2D) {
+    left = left - right
+}
