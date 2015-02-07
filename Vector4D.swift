@@ -36,3 +36,7 @@ func + (left: Vector4D, right: Vector4D) -> Vector4D {
 func - (left: Vector4D, right: Vector4D) -> Vector4D {
     return Vector4D(left.x - right.x, left.y - right.y, left.z - right.z, left.w - right.w)
 }
+
+func += (inout left: Vector4D, right: Vector4D) {
+    left = left + right
+}
