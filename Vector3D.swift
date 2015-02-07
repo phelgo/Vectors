@@ -33,10 +33,10 @@ struct Vector3D {
     static let back = Vector3D(0, 0, -1)
 }
 
-func + (lhs: Vector3D, rhs: Vector3D) -> Vector3D {
-    return Vector3D(lhs.x + rhs.x, lhs.y + rhs.y, lhs.z + rhs.z)
+func + (left: Vector3D, right: Vector3D) -> Vector3D {
+    return Vector3D(left.x + right.x, left.y + right.y, left.z + right.z)
 }
 
-func - (lhs: Vector3D, rhs: Vector3D) -> Vector3D {
-    return Vector3D(lhs.x - rhs.x, lhs.y - rhs.y, lhs.z - rhs.z)
+func - (left: Vector3D, right: Vector3D) -> Vector3D {
+    return Vector3D(left.x - right.x, left.y - right.y, left.z - right.z)
 }

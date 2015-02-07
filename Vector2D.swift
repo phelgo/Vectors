@@ -29,10 +29,10 @@ struct Vector2D {
     static let down = Vector2D(0, -1)
 }
 
-func + (lhs: Vector2D, rhs: Vector2D) -> Vector2D {
-    return Vector2D(lhs.x + rhs.x, lhs.y + rhs.y)
+func + (left: Vector2D, right: Vector2D) -> Vector2D {
+    return Vector2D(left.x + right.x, left.y + right.y)
 }
 
-func - (lhs: Vector2D, rhs: Vector2D) -> Vector2D {
-    return Vector2D(lhs.x - rhs.x, lhs.y - rhs.y)
+func - (left: Vector2D, right: Vector2D) -> Vector2D {
+    return Vector2D(left.x - right.x, left.y - right.y)
 }

@@ -29,10 +29,10 @@ struct Vector4D {
     static let one = Vector4D(1, 1, 1, 1)
 }
 
-func + (lhs: Vector4D, rhs: Vector4D) -> Vector4D {
-    return Vector4D(lhs.x + rhs.x, lhs.y + rhs.y, lhs.z + rhs.z, lhs.w + rhs.w)
+func + (left: Vector4D, right: Vector4D) -> Vector4D {
+    return Vector4D(left.x + right.x, left.y + right.y, left.z + right.z, left.w + right.w)
 }
 
-func - (lhs: Vector4D, rhs: Vector4D) -> Vector4D {
-    return Vector4D(lhs.x - rhs.x, lhs.y - rhs.y, lhs.z - rhs.z, lhs.w - rhs.w)
+func - (left: Vector4D, right: Vector4D) -> Vector4D {
+    return Vector4D(left.x - right.x, left.y - right.y, left.z - right.z, left.w - right.w)
 }
