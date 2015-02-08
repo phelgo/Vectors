@@ -55,3 +55,11 @@ func -= (inout left: Vector3D, right: Vector3D) {
 prefix func - (vector: Vector3D) -> Vector3D {
     return Vector3D(-vector.x, -vector.y, -vector.z)
 }
+
+extension SCNVector3 {
+    init (_ value: Vector3D) {
+        self.x = Float(value.x)
+        self.y = Float(value.y)
+        self.z = Float(value.z)
+    }
+}
