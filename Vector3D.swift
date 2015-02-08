@@ -4,7 +4,7 @@
 
 import Darwin
 
-struct Vector3D {
+struct Vector3D: Equatable {
     let x: Double
     let y: Double
     let z: Double
@@ -31,6 +31,10 @@ struct Vector3D {
     static let down = Vector3D(0, -1, 0)
     static let forward = Vector3D(0, 0, 1)
     static let back = Vector3D(0, 0, -1)
+}
+
+func == (left: Vector3D, right: Vector3D) -> Bool {
+    return (left.x == right.x) && (left.y == right.y) && (left.z == right.z)
 }
 
 func + (left: Vector3D, right: Vector3D) -> Vector3D {
