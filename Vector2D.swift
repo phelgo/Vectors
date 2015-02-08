@@ -52,3 +52,10 @@ func -= (inout left: Vector2D, right: Vector2D) {
 prefix func - (vector: Vector2D) -> Vector2D {
     return Vector2D(-vector.x, -vector.y)
 }
+
+extension CGVector {
+    init (_ value: Vector2D) {
+        self.dx = CGFloat(value.x)
+        self.dy = CGFloat(value.y)
+    }
+}
