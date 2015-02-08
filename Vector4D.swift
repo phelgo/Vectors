@@ -4,7 +4,7 @@
 
 import Darwin
 
-struct Vector4D {
+struct Vector4D: Equatable {
     let x: Double
     let y: Double
     let z: Double
@@ -27,6 +27,10 @@ struct Vector4D {
     
     static let zero = Vector4D(0, 0, 0, 0)
     static let one = Vector4D(1, 1, 1, 1)
+}
+
+func == (left: Vector4D, right: Vector4D) -> Bool {
+    return (left.x == right.x) && (left.y == right.y) && (left.z == right.z) && (left.w == right.w)
 }
 
 func + (left: Vector4D, right: Vector4D) -> Vector4D {
