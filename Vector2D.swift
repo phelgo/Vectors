@@ -59,3 +59,7 @@ extension CGVector {
         self.dy = CGFloat(value.y)
     }
 }
+
+prefix func ~ (vector: Vector2D) -> CGVector {
+    return CGVector(vector)
+}
