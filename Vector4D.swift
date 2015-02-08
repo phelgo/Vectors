@@ -60,3 +60,7 @@ extension SCNVector4 {
         self.w = Float(value.w)
     }
 }
+
+prefix func ~ (vector: Vector4D) -> SCNVector4 {
+    return SCNVector4(vector)
+}
