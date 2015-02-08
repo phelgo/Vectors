@@ -1,7 +1,7 @@
 // Vector structs for Swift
 // Copyright (c) 2015 phelgo. MIT licensed.
 
-import Darwin
+import SceneKit
 
 struct Vector4D: Equatable {
     let x: Double

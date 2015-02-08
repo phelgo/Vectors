@@ -1,7 +1,7 @@
 // Vector structs for Swift
 // Copyright (c) 2015 phelgo. MIT licensed.
 
-import Darwin
+import CoreGraphics
 
 struct Vector2D: Equatable {
     let x: Double
