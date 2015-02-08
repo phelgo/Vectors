@@ -63,3 +63,7 @@ extension SCNVector3 {
         self.z = Float(value.z)
     }
 }
+
+prefix func ~ (vector: Vector3D) -> SCNVector3 {
+    return SCNVector3(vector)
+}
