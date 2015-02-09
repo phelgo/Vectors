@@ -3,7 +3,7 @@
 
 import CoreGraphics
 
-struct Vector2D: Equatable {
+struct Vector2D: Equatable, Printable {
     let x: Double
     let y: Double
     
@@ -18,6 +18,10 @@ struct Vector2D: Equatable {
     
     var normalized: Vector2D {
         return Vector2D(x / magnitude, y / magnitude)
+    }
+    
+    var description: String {
+        return "Vector2D(\(x), \(y))"
     }
     
     static let zero = Vector2D(0, 0)
