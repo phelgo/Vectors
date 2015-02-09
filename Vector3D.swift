@@ -3,7 +3,7 @@
 
 import SceneKit
 
-struct Vector3D: Equatable, Printable {
+struct Vector3D: DebugPrintable, Equatable, Printable {
     let x: Double
     let y: Double
     let z: Double
@@ -24,6 +24,10 @@ struct Vector3D: Equatable, Printable {
     
     var description: String {
         return "Vector3D(\(x), \(y), \(z))"
+    }
+    
+    var debugDescription: String {
+        return "Vector3D(\(x), \(y), \(z)), magnitude: \(magnitude)"
     }
     
     static let zero = Vector3D(0, 0, 0)
