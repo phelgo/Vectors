@@ -3,7 +3,7 @@
 
 import CoreGraphics
 
-struct Vector2D: Equatable, Printable {
+struct Vector2D: DebugPrintable, Equatable, Printable {
     let x: Double
     let y: Double
     
@@ -22,6 +22,10 @@ struct Vector2D: Equatable, Printable {
     
     var description: String {
         return "Vector2D(\(x), \(y))"
+    }
+    
+    var debugDescription: String {
+        return "Vector2D(\(x), \(y)), magnitude: \(magnitude)"
     }
     
     static let zero = Vector2D(0, 0)
