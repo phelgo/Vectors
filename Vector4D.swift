@@ -3,7 +3,7 @@
 
 import SceneKit
 
-struct Vector4D: DebugPrintable, Equatable, Printable {
+struct Vector4D: DebugPrintable, Equatable, Hashable, Printable {
     let x: Double
     let y: Double
     let z: Double
@@ -30,6 +30,10 @@ struct Vector4D: DebugPrintable, Equatable, Printable {
     
     var debugDescription: String {
         return "Vector4D(\(x), \(y), \(z), \(w)), magnitude: \(magnitude)"
+    }
+    
+    var hashValue: Int {
+        return x.hashValue ^ y.hashValue ^ z.hashValue ^ w.hashValue
     }
     
     static let zero = Vector4D(0, 0, 0, 0)
