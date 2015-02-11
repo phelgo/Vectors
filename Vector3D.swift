@@ -3,7 +3,7 @@
 
 import SceneKit
 
-struct Vector3D: DebugPrintable, Equatable, Printable {
+struct Vector3D: DebugPrintable, Equatable, Hashable, Printable {
     let x: Double
     let y: Double
     let z: Double
@@ -28,6 +28,10 @@ struct Vector3D: DebugPrintable, Equatable, Printable {
     
     var debugDescription: String {
         return "Vector3D(\(x), \(y), \(z)), magnitude: \(magnitude)"
+    }
+    
+    var hashValue: Int {
+        return x.hashValue ^ y.hashValue ^ z.hashValue
     }
     
     static let zero = Vector3D(0, 0, 0)
