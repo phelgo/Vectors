@@ -3,7 +3,7 @@
 
 import CoreGraphics
 
-struct Vector2D: DebugPrintable, Equatable, Printable {
+struct Vector2D: DebugPrintable, Equatable, Hashable, Printable {
     let x: Double
     let y: Double
     
@@ -26,6 +26,10 @@ struct Vector2D: DebugPrintable, Equatable, Printable {
     
     var debugDescription: String {
         return "Vector2D(\(x), \(y)), magnitude: \(magnitude)"
+    }
+    
+    var hashValue: Int {
+        return x.hashValue ^ y.hashValue
     }
     
     static let zero = Vector2D(0, 0)
