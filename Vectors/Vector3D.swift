@@ -3,72 +3,72 @@
 
 import SceneKit
 
-struct Vector3D: DebugPrintable, Equatable, Hashable, Printable {
-    let x: Double
-    let y: Double
-    let z: Double
+public struct Vector3D: DebugPrintable, Equatable, Hashable, Printable {
+    public let x: Double
+    public let y: Double
+    public let z: Double
     
-    init(_ x: Double, _ y: Double, _ z: Double) {
+    public init(_ x: Double, _ y: Double, _ z: Double) {
         self.x = x
         self.y = y
         self.z = z
     }
     
-    var magnitude: Double {
+    public var magnitude: Double {
         return sqrt(x * x + y * y + z * z)
     }
     
-    var normalized: Vector3D {
+    public var normalized: Vector3D {
         return Vector3D(x / magnitude, y / magnitude, z / magnitude)
     }
     
-    var description: String {
+    public var description: String {
         return "Vector3D(\(x), \(y), \(z))"
     }
     
-    var debugDescription: String {
+    public var debugDescription: String {
         return "Vector3D(\(x), \(y), \(z)), magnitude: \(magnitude)"
     }
     
-    var hashValue: Int {
+    public var hashValue: Int {
         return x.hashValue ^ y.hashValue ^ z.hashValue
     }
     
-    static let zero = Vector3D(0, 0, 0)
-    static let one = Vector3D(1, 1, 1)
-    static let left = Vector3D(-1, 0, 0)
-    static let right = Vector3D(1, 0, 0)
-    static let up = Vector3D(0, 1, 0)
-    static let down = Vector3D(0, -1, 0)
-    static let forward = Vector3D(0, 0, 1)
-    static let back = Vector3D(0, 0, -1)
+    public static let zero = Vector3D(0, 0, 0)
+    public static let one = Vector3D(1, 1, 1)
+    public static let left = Vector3D(-1, 0, 0)
+    public static let right = Vector3D(1, 0, 0)
+    public static let up = Vector3D(0, 1, 0)
+    public static let down = Vector3D(0, -1, 0)
+    public static let forward = Vector3D(0, 0, 1)
+    public static let back = Vector3D(0, 0, -1)
 }
 
-func == (left: Vector3D, right: Vector3D) -> Bool {
+public func == (left: Vector3D, right: Vector3D) -> Bool {
     return (left.x == right.x) && (left.y == right.y) && (left.z == right.z)
 }
 
-func + (left: Vector3D, right: Vector3D) -> Vector3D {
+public func + (left: Vector3D, right: Vector3D) -> Vector3D {
     return Vector3D(left.x + right.x, left.y + right.y, left.z + right.z)
 }
 
-func - (left: Vector3D, right: Vector3D) -> Vector3D {
+public func - (left: Vector3D, right: Vector3D) -> Vector3D {
     return Vector3D(left.x - right.x, left.y - right.y, left.z - right.z)
 }
 
-func += (inout left: Vector3D, right: Vector3D) {
+public func += (inout left: Vector3D, right: Vector3D) {
     left = left + right
 }
 
-func -= (inout left: Vector3D, right: Vector3D) {
+public func -= (inout left: Vector3D, right: Vector3D) {
     left = left - right
 }
 
-prefix func - (vector: Vector3D) -> Vector3D {
+public prefix func - (vector: Vector3D) -> Vector3D {
     return Vector3D(-vector.x, -vector.y, -vector.z)
 }
 
-extension SCNVector3 {
+public extension SCNVector3 {
     init (_ value: Vector3D) {
         self.x = Float(value.x)
         self.y = Float(value.y)
@@ -76,6 +76,6 @@ extension SCNVector3 {
     }
 }
 
-prefix func ~ (vector: Vector3D) -> SCNVector3 {
+public prefix func ~ (vector: Vector3D) -> SCNVector3 {
     return SCNVector3(vector)
 }
