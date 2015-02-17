@@ -74,10 +74,7 @@ public prefix func - (vector: Vector4D) -> Vector4D {
 
 public extension SCNVector4 {
     init (_ value: Vector4D) {
-        self.x = Float(value.x)
-        self.y = Float(value.y)
-        self.z = Float(value.z)
-        self.w = Float(value.w)
+        self.init(x: Float(value.x), y: Float(value.y), z: Float(value.z), w: Float(value.w))
     }
 }
 
