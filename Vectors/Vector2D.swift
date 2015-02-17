@@ -60,6 +60,14 @@ public func -= (inout left: Vector2D, right: Vector2D) {
     left = left - right
 }
 
+public func * (value: Double, vector: Vector2D) -> Vector2D {
+    return Vector2D(value * vector.x, value * vector.y)
+}
+
+public func * (vector: Vector2D, value: Double) -> Vector2D {
+    return value * vector
+}
+
 public prefix func - (vector: Vector2D) -> Vector2D {
     return Vector2D(-vector.x, -vector.y)
 }
