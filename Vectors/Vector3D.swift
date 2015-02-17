@@ -78,9 +78,7 @@ public prefix func - (vector: Vector3D) -> Vector3D {
 
 public extension SCNVector3 {
     init (_ value: Vector3D) {
-        self.x = Float(value.x)
-        self.y = Float(value.y)
-        self.z = Float(value.z)
+        self.init(x: Float(value.x), y: Float(value.y), z: Float(value.z))
     }
 }
 
