@@ -72,6 +72,10 @@ public prefix func - (vector: Vector2D) -> Vector2D {
     return Vector2D(-vector.x, -vector.y)
 }
 
+public func dotProduct(vectorA: Vector2D, vectorB:Vector2D) -> Double {
+    return vectorA.x * vectorB.x + vectorA.y * vectorB.y
+}
+
 public extension CGVector {
     init (_ value: Vector2D) {
         self.dx = CGFloat(value.x)

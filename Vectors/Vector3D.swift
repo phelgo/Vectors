@@ -76,6 +76,10 @@ public prefix func - (vector: Vector3D) -> Vector3D {
     return Vector3D(-vector.x, -vector.y, -vector.z)
 }
 
+public func dotProduct(vectorA: Vector3D, vectorB:Vector3D) -> Double {
+    return vectorA.x * vectorB.x + vectorA.y * vectorB.y + vectorA.z * vectorB.z
+}
+
 public extension SCNVector3 {
     init (_ value: Vector3D) {
         self.init(x: Float(value.x), y: Float(value.y), z: Float(value.z))
