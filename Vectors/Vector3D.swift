@@ -84,6 +84,12 @@ public func crossProduct(vectorA: Vector3D, vectorB:Vector3D) -> Vector3D {
     return Vector3D(vectorA.y * vectorB.z - vectorA.z * vectorB.y, vectorA.z * vectorB.x - vectorA.x * vectorB.z, vectorA.x * vectorB.y - vectorA.y * vectorB.x)
 }
 
+infix operator +* { associativity left }
+
+public func +*(left: Vector3D, right: Vector3D) -> Vector3D {
+    return crossProduct(left, vectorB: right)
+}
+
 public extension SCNVector3 {
     init (_ value: Vector3D) {
         self.init(x: Float(value.x), y: Float(value.y), z: Float(value.z))
