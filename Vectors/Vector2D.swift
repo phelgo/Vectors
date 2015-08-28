@@ -3,7 +3,7 @@
 
 import CoreGraphics
 
-public struct Vector2D: DebugPrintable, Equatable, Hashable, Printable {
+public struct Vector2D: CustomDebugStringConvertible, CustomStringConvertible, Equatable, Hashable {
     public let x: Double
     public let y: Double
     

@@ -3,7 +3,7 @@
 
 import SceneKit
 
-public struct Vector4D: DebugPrintable, Equatable, Hashable, Printable {
+public struct Vector4D: CustomDebugStringConvertible, CustomStringConvertible, Equatable, Hashable {
     public let x: Double
     public let y: Double
     public let z: Double
