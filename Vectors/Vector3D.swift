@@ -80,6 +80,12 @@ public func dotProduct(vectorA: Vector3D, vectorB:Vector3D) -> Double {
     return vectorA.x * vectorB.x + vectorA.y * vectorB.y + vectorA.z * vectorB.z
 }
 
+infix operator -* { associativity left }
+
+public func -*(left: Vector3D, right:Vector3D) -> Double {
+    return dotProduct(left, vectorB: right)
+}
+
 public func crossProduct(vectorA: Vector3D, vectorB:Vector3D) -> Vector3D {
     return Vector3D(vectorA.y * vectorB.z - vectorA.z * vectorB.y, vectorA.z * vectorB.x - vectorA.x * vectorB.z, vectorA.x * vectorB.y - vectorA.y * vectorB.x)
 }

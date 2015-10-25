@@ -76,6 +76,12 @@ public func dotProduct(vectorA: Vector2D, vectorB:Vector2D) -> Double {
     return vectorA.x * vectorB.x + vectorA.y * vectorB.y
 }
 
+infix operator -* { associativity left }
+
+public func -*(left: Vector2D, right:Vector2D) -> Double {
+    return dotProduct(left, vectorB: right)
+}
+
 public extension CGVector {
     init (_ value: Vector2D) {
         self.dx = CGFloat(value.x)

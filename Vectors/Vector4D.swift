@@ -76,6 +76,12 @@ public func dotProduct(vectorA: Vector4D, vectorB:Vector4D) -> Double {
     return vectorA.x * vectorB.x + vectorA.y * vectorB.y + vectorA.z * vectorB.z + vectorA.w * vectorB.w
 }
 
+infix operator -* { associativity left }
+
+public func -*(left: Vector4D, right:Vector4D) -> Double {
+    return dotProduct(left, vectorB: right)
+}
+
 public extension SCNVector4 {
     init (_ value: Vector4D) {
         self.init(x: Float(value.x), y: Float(value.y), z: Float(value.z), w: Float(value.w))
