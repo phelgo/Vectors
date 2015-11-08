@@ -16,6 +16,10 @@ public struct Vector2D: CustomDebugStringConvertible, CustomStringConvertible, E
         return sqrt(x * x + y * y)
     }
     
+    public var squaredMagnitude: Double {
+        return x * x + y * y
+    }
+    
     public var normalized: Vector2D {
         return Vector2D(x / magnitude, y / magnitude)
     }

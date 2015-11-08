@@ -18,6 +18,10 @@ public struct Vector3D: CustomDebugStringConvertible, CustomStringConvertible, E
         return sqrt(x * x + y * y + z * z)
     }
     
+    public var squaredMagnitude: Double {
+        return x * x + y * y + z * z
+    }
+    
     public var normalized: Vector3D {
         return Vector3D(x / magnitude, y / magnitude, z / magnitude)
     }

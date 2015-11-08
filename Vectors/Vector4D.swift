@@ -20,6 +20,10 @@ public struct Vector4D: CustomDebugStringConvertible, CustomStringConvertible, E
         return sqrt(x * x + y * y + z * z + w * w)
     }
     
+    public var squaredMagnitude: Double {
+        return x * x + y * y + z * z + w * w
+    }
+    
     public var normalized: Vector4D {
         return Vector4D(x / magnitude, y / magnitude, z / magnitude, w / magnitude)
     }

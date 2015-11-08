@@ -16,6 +16,13 @@ let distance = Vector3D(1, 4, 8).magnitude
 // 9
 ```
 
+Squared Magnitude (for optimized comparison)
+
+```swift
+let isGreater = Vector3D(2, 2, 2).squaredMagnitude > Vector3D(1, 1, 1).squaredMagnitude
+// true
+```
+
 Normalization
 
 ```swift
